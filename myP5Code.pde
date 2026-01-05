@@ -23,18 +23,26 @@ void draw(){
   
   var eyeSize;
 
-  eyeSize = 35;
+  eyeSize = 80;
   fill(0, 0, 0);
   ellipse(170, 150, eyeSize, eyeSize);  // left eye
   ellipse(230, 150, eyeSize, eyeSize);  // right eye
+  
+  fill(255,255,255)
+  var pupil;
 
+  pupil = 30
+  ellipse(170,150,pupil,pupil)
+  ellipse(230,150,pupil,pupil)
+  
   line(150, 200, 250, 200);   // mouth
+  
   var teeth;
 
   teeth = 35;
   noFill();
-  rect(185, 200, 15, teeth); // left tooth
-  rect(200, 200, 15, teeth); // right tooth
+  rect(180, 200, 20, teeth); // left tooth
+  rect(200, 200, 20, teeth); // right tooth
   
 
 }
@@ -56,7 +64,6 @@ void mousePressed(){
   var myText = "x: " + mouseX + "\ny: " + mouseY;
   text(myText, mouseX + 15, mouseY);
   console.log(myText);
-  
   
 }
 
